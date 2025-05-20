@@ -1,0 +1,16 @@
+{
+  "name": "curs",
+
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/HomePage.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*).html",
+      "destination": "/$1"
+    }
+  ]
+}
