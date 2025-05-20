@@ -1,6 +1,5 @@
 {
-  "name": "curs",
-
+  "version": 2,
   "routes": [
     {
       "src": "/",
