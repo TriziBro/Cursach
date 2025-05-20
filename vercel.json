@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/HomePage.html"
+      "dest": "HomePage.html"
     }
   ],
   "rewrites": [
@@ -11,5 +11,10 @@
       "source": "/(.*).html",
       "destination": "/$1"
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": {
+    "Cache-Control": "public, max-age=3600"
+  }
 }
