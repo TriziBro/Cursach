@@ -1,20 +1,26 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/",
-      "dest": "HomePage.html"
-    }
-  ],
   "rewrites": [
+    {
+      "source": "/",
+      "destination": "/HomePage.html"
+    },
     {
       "source": "/(.*).html",
       "destination": "/$1"
     }
   ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": {
-    "Cache-Control": "public, max-age=3600"
-  }
+  "trailingSlash": false
 }
